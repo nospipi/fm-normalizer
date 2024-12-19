@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "fm-normalizer",
+  "version": "1.1",
+  "description": "Normalize the fm players stat values",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
